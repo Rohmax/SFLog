@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFLog</fullName>
+    <description>A native Force.com utility to implement Logging for custom Apex Code.</description>
+    <types>
+        <members>LogCache</members>
+        <members>LogCachetest</members>
+        <members>LoggingService</members>
+        <members>LoggingServicetest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ContentVersion.Log__c</members>
+        <members>SFLoggingSettings__mdt.IsActive__c</members>
+        <members>SFLoggingSettings__mdt.LogLevel__c</members>
+        <members>SystemLog__c.Customer__c</members>
+        <members>SystemLog__c.ExceptionType__c</members>
+        <members>SystemLog__c.FunctionalArea__c</members>
+        <members>SystemLog__c.LogLevel__c</members>
+        <members>SystemLog__c.LoggedDateTime__c</members>
+        <members>SystemLog__c.Message__c</members>
+        <members>SystemLog__c.SessionId__c</members>
+        <members>SystemLog__c.SourceClassName__c</members>
+        <members>SystemLog__c.SourceMethodName__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>SFLoggingSettings.ErrorSettings</members>
+        <members>SFLoggingSettings.InfoSettings</members>
+        <members>SFLoggingSettings.WarningSettings</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>SFLoggingSettings__mdt</members>
+        <members>SystemLog__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>SystemLog__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>SystemLog__c.TestFieldSet</members>
+        <name>FieldSet</name>
+    </types>
+    <types>
+        <members>SFLoggingSettings__mdt-SFLoggingSettings Layout</members>
+        <members>SystemLog__c-SystemLog Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>SystemLog__c.All</members>
+        <name>ListView</name>
+    </types>
+    <version>39.0</version>
+</Package>
