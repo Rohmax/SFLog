@@ -52,16 +52,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>false</enableSharing>
     <enableStreamingApi>false</enableStreamingApi>
-    <fieldSets>
-        <fullName>TestFieldSet</fullName>
-        <description>This is a field set used for testing Shell_SOQLGenerationService utility class, please do not delete this.</description>
-        <displayedFields>
-            <field>Message__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <label>TestFieldSet</label>
-    </fieldSets>
     <fields>
         <fullName>Customer__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
