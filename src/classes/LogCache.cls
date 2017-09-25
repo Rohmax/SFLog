@@ -1,4 +1,4 @@
-/* A class to cache logs*/
+/* A class to cache logs Some change, some changes*/
 public class LogCache {
 
 	// A list of all the log info list which is basically a wrapper of log and related file records.
