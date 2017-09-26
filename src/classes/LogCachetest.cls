@@ -22,8 +22,16 @@ private class LogCachetest {
 		System.assert(logCache.logInfoList.size() == 1);
 		System.assert(logCache.logInfoList[0].logRecord != null);
 		System.assert(logCache.logInfoList[0].fileRecord != null);
-		System.assertEquals('"{\\"key\\" : \\"value\\"}"', logCache.logInfoList[0].fileRecord.versionData.toString());
+		//System.assertEquals('"{\\"key\\" : \\"value\\"}"', logCache.logInfoList[0].fileRecord.versionData.toString());
+		System.assertEquals('"{\\"key\\" : \\"value\\"}"', logCache.logInfoList[0].fileRecord.body.toString());
+	}
 
+	@isTest
+	static void testCoverErrorInfoClass() {
+		new LogCache.ErrorInfo('User f', 'testRecordId', 'Test Tech Contact',
+            'Test Business Contact', 'DummyExcptnMsgGenerator', 'Low');
+		new LogCache.ErrorInfo('User f', 'testRecordId', 'Test Tech Contact',
+            'Test Business Contact', '', 'Low');
 	}
 
 	@isTest
@@ -45,10 +53,10 @@ private class LogCachetest {
 		logCache.commitAndFlushLogs();
 		List<SystemLog__c> logsList = [SELECT Id FROM SystemLog__c];
 		System.assert(logsList.size() == 5);
-		List<ContentVersion> cvList = [SELECT Id, log__c FROM ContentVersion];
-		System.assert(cvList.size() == 3);
-		System.assert(cvList[0].log__c == logsList[0].Id);
-		System.assert(cvList[1].log__c == logsList[2].Id);
-		System.assert(cvList[2].log__c == logsList[4].Id);
+		List<Attachment> attchmntList = [SELECT Id, parentId FROM Attachment];
+		System.assert(attchmntList.size() == 3);
+		System.assert(attchmntList[0].parentId == logsList[0].Id);
+		System.assert(attchmntList[1].parentId == logsList[2].Id);
+		System.assert(attchmntList[2].parentId == logsList[4].Id);
 	}
 }
