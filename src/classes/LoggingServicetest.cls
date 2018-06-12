@@ -109,7 +109,7 @@ private class LoggingServicetest {
 		logService.commitLogs();
 		System.assertEquals(200, [SELECT Id, (SELECT Id, ParentId FROM Attachments) FROM SystemLog__c].size());
         
-        //Caluclating the number of attachment records stored as Content Version against a log
+        //Calculating the number of attachment records stored as Content Version against a log
 		Integer logAttachmentsCount = 0;
 		for(SystemLog__c testLog : [SELECT Id, (SELECT Id, ParentId FROM Attachments) FROM SystemLog__c]) {
 			if(!testLog.Attachments.isEmpty()) {
